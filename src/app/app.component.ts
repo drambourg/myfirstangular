@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myFirstApp';
+  title = 'Damien';
+  avis = 'super';
+  objdate = new Date();
+  date = this.objdate.getDate() + "/" + this.objdate.getMonth() + "/" + this.objdate.getFullYear();
 }
