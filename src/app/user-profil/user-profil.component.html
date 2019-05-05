@@ -1,3 +1,19 @@
-<p>
-  user-profil works!
-</p>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="card p-3">
+            <img [src]="user.photo" [alt]="user.name"/>
+            <div class="card-body text-left">
+                <h3>Nom : {{user.name}}</h3>
+                <h3>Prénom : {{user.firstName}}</h3>
+                <h4 class="text-info"  [hidden]="show">Age : {{user.age}}</h4>
+            </div>
+            <div class="card-body text-left">
+                <p class="text-success">{{user.quote}}</p>
+                <input class="w-100" type="text" [(ngModel)]="user.quote" placeholder="Une citation"/>
+            </div>
+            <div class="card-footer">
+                <button (click)="toggleAge()" class="btn btn-primary w-100" id="bt">{{buttonName}}</button>
+            </div>
+        </div>
+    </div>
+</div>
