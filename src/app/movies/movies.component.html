@@ -2,11 +2,16 @@
     LISTE DE FILMS
 </h2>
 <div class="row justify-content-center">
-    <ul class=" col-md-6">
-        <li appHighlightmovie>The Godfather</li>
-        <li >Gone With the Wind</li>
-        <li>Casablanca</li>
-        <li>It's a Wonderful Life</li>
-        <li>Schindler's List</li>
+    <div class="col-md-4">
+        <button (click)="toggleAge()" class="btn btn-primary w-100" id="bt">{{buttonName}}</button>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <ul *appDisplaymovies="showMovies" class=" col-md-6">
+        <li class="p-3" appHighlightmovie>The Godfather</li>
+        <li class="p-3" >Gone With the Wind</li>
+        <li class="p-3" >Casablanca</li>
+        <li class="p-3" >It's a Wonderful Life</li>
+        <li class="p-3" >Schindler's List</li>
     </ul>
 </div>

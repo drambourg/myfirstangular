@@ -6,21 +6,24 @@ import {Component, OnInit,  HostListener } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  isFirst: boolean = true;
+  public showMovies: boolean;
+  public buttonName: any = 'Afficher la liste';
 
   constructor() {}
 
   ngOnInit() {
+    this.showMovies = true;
   }
 
-  @HostListener('mouseover') onMouseOver() {
-    this.isFirst = true;
+  toggleAge() {
+    this.showMovies = !this.showMovies;
+    // CHANGE THE NAME OF THE BUTTON.
+    if (this.showMovies) {
+      this.buttonName = 'Afficher la liste';
+    } else {
+      this.buttonName = 'Masquer la liste';
+    }
   }
-
-  @HostListener('mouseout') onMouseOut() {
-    this.isFirst = false;
-  }
-
 }
 
 
