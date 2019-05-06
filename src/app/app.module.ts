@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfilComponent } from './user-profil/user-profil.component';
 import { MoviesComponent } from './movies/movies.component';
+import { HighlightmovieDirective } from './movies/highlightmovie.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     UserProfilComponent,
-    MoviesComponent
+    MoviesComponent,
+    HighlightmovieDirective
   ],
   imports: [
     BrowserModule,

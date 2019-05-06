@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit,  HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-movies',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
   isFirst: boolean = true;
-  constructor() { }
+
+  constructor() {}
 
   ngOnInit() {
   }
 
+  @HostListener('mouseover') onMouseOver() {
+    this.isFirst = true;
+  }
+
+  @HostListener('mouseout') onMouseOut() {
+    this.isFirst = false;
+  }
+
 }
+
+
